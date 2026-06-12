@@ -32,7 +32,6 @@
         html { scroll-behavior: smooth; }
         body { background: #1A1A1A; color: #F5F0EB; font-family: 'DM Sans', sans-serif; overflow-x: hidden; }
 
-        /* Grain overlay */
         body::after {
             content: '';
             position: fixed;
@@ -42,12 +41,10 @@
             z-index: 9999;
         }
 
-        /* Custom scrollbar */
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #1A1A1A; }
         ::-webkit-scrollbar-thumb { background: #A68A6B; border-radius: 3px; }
 
-        /* Animations */
         @keyframes fadeUp {
             from { opacity: 0; transform: translateY(40px); }
             to { opacity: 1; transform: translateY(0); }
@@ -81,15 +78,12 @@
         .delay-6 { animation-delay: 0.6s; }
         .delay-7 { animation-delay: 0.7s; }
 
-        /* Scroll-triggered animations */
         .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
         .reveal.visible { opacity: 1; transform: translateY(0); }
 
-        /* Marquee */
         .marquee-track { display: flex; animation: marquee 25s linear infinite; }
         .marquee-track:hover { animation-play-state: paused; }
 
-        /* Project cards */
         .project-card {
             position: relative;
             border: 1px solid rgba(166, 138, 107, 0.15);
@@ -117,7 +111,6 @@
             color: #D4A853;
         }
 
-        /* Featured card — full width */
         .project-card-featured {
             grid-column: span 2;
         }
@@ -125,7 +118,6 @@
             .project-card-featured { grid-column: span 1; }
         }
 
-        /* Nav link hover */
         .nav-link { position: relative; }
         .nav-link::after {
             content: '';
@@ -139,21 +131,18 @@
         }
         .nav-link:hover::after { width: 100%; }
 
-        /* Status dot pulse */
         @keyframes pulse {
             0%, 100% { opacity: 1; }
             50% { opacity: 0.4; }
         }
         .status-dot { animation: pulse 2s ease-in-out infinite; }
 
-        /* Hero name */
         .hero-name {
             font-size: clamp(3.5rem, 10vw, 9rem);
             line-height: 0.95;
             letter-spacing: -0.03em;
         }
 
-        /* CTA button */
         .cta-btn {
             position: relative;
             overflow: hidden;
@@ -171,7 +160,6 @@
         .cta-btn:hover { color: #1A1A1A; border-color: #D4A853; }
         .cta-btn span { position: relative; z-index: 1; }
 
-        /* Divider line animation */
         .divider-line {
             height: 1px;
             background: rgba(166, 138, 107, 0.2);
@@ -191,7 +179,6 @@
             animation: expandLine 1.2s ease forwards;
         }
 
-        /* Skill tag */
         .skill-tag {
             border: 1px solid rgba(166, 138, 107, 0.25);
             transition: all 0.3s ease;
@@ -202,7 +189,6 @@
             color: #D4A853;
         }
 
-        /* Contact input */
         .contact-input {
             background: transparent;
             border: none;
@@ -222,14 +208,12 @@
 
         textarea.contact-input { resize: none; min-height: 120px; }
 
-        /* Mobile nav */
         .mobile-menu {
             transform: translateX(100%);
             transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .mobile-menu.open { transform: translateX(0); }
 
-        /* Project links row */
         .proj-links { display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
         .proj-link {
             display: inline-flex;
@@ -243,7 +227,6 @@
         }
         .proj-link:hover { color: #D4A853; gap: 10px; }
 
-        /* AI badge */
         .ai-badge {
             display: inline-flex;
             align-items: center;
@@ -326,10 +309,10 @@
             </div>
             <div class="md:col-span-7 md:col-start-6 reveal" style="transition-delay: 0.15s;">
                 <p class="text-lg md:text-xl text-muted leading-relaxed font-light mb-6">
-                    I'm Anand,a fresh Computer Engineering diploma graduate from <strong class="text-cream font-medium">Temasek Polytechnic, Singapore</strong>. I build responsive, accessible, and performant web applications with a focus on clean architecture and user-first design.
+                    I'm Anand, a fresh Computer Engineering diploma graduate from <strong class="text-cream font-medium">Temasek Polytechnic, Singapore</strong>. I build responsive, accessible, and performant web applications with a focus on clean architecture and user-first design.
                 </p>
                 <p class="text-lg md:text-xl text-muted leading-relaxed font-light mb-10">
-                    I don't just write code,I think through problems, ship fast, and iterate based on real feedback. I bring discipline from engineering and a genuine hunger to keep learning what's next.
+                    I don't just write code, I think through problems, ship fast, and iterate based on real feedback. I bring discipline from engineering and a genuine hunger to keep learning what's next.
                 </p>
                 <div class="grid grid-cols-2 gap-8">
                     <div>
@@ -390,7 +373,7 @@
                     AI-powered interview preparation platform. Paste any job description, get 8 tailored questions (technical, behavioral, situational), answer them, and receive a score out of 10 with detailed feedback and a sample stronger answer.
                 </p>
                 <p class="text-muted/70 text-sm font-light leading-relaxed mb-8 max-w-2xl">
-                    Built a 3-provider AI fallback chain (Gemini 2.0 Flash → Groq Llama 3.3 70B → OpenRouter) with automatic key rotation, ensuring zero downtime. Backed by Supabase PostgreSQL with Row Level Security, Google OAuth via PKCE flow, and Zustand state persistence across sessions.
+                    Built a 3-provider AI fallback chain (Gemini 2.0 Flash to Groq Llama 3.3 70B to OpenRouter) with automatic key rotation, ensuring zero downtime. Backed by Supabase PostgreSQL with Row Level Security, Google OAuth via PKCE flow, and Zustand state persistence across sessions.
                 </p>
                 <div class="flex flex-wrap gap-2 mb-8">
                     <span class="text-xs tracking-wider text-warm px-3 py-1 border border-warm/20 rounded-full">Next.js 16</span>
@@ -414,33 +397,106 @@
                 </div>
             </div>
 
-            <!-- SkyHarvest -->
+            <!-- Forge -->
             <div class="project-card rounded-2xl p-8 md:p-10 reveal" style="transition-delay: 0.1s;">
-                <div class="flex items-start justify-between mb-8">
-                    <span class="proj-num font-serif text-6xl italic text-warm/20">02</span>
-                    <span class="text-xs tracking-widest text-muted uppercase mt-2">IoT · Full Stack</span>
+                <div class="flex items-start justify-between mb-8 flex-wrap gap-4">
+                    <div class="flex items-center gap-4">
+                        <span class="proj-num font-serif text-6xl italic text-warm/20">02</span>
+                        <span class="ai-badge">
+                            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                            AI-Powered
+                        </span>
+                    </div>
+                    <span class="text-xs tracking-widest text-muted uppercase mt-2">Full Stack · Dashboard</span>
                 </div>
-                <h3 class="font-serif text-2xl md:text-3xl italic text-cream mb-3">SkyHarvest</h3>
+                <h3 class="font-serif text-2xl md:text-3xl italic text-cream mb-3">Forge</h3>
                 <p class="text-muted font-light leading-relaxed mb-3">
-                    Real-time IoT sensor monitoring dashboard for an aquaponics facility. Tracks 8+ environmental metrics from ESP32 hardware over LoRa, with automated Telegram alerts when readings breach safety thresholds.
+                    Cinematic AI-powered fitness dashboard for serious physique athletes. Covers workout tracking, nutrition with carb cycling, body composition, progress photography, and an AI coach — all in one dark-mode interface.
                 </p>
                 <p class="text-muted/70 text-sm font-light leading-relaxed mb-6">
-                    Final Year Project at Temasek Polytechnic. Cut manual monitoring effort by ~80%. Built end-to-end from hardware ingestion to web UI with role-based admin panel.
+                    Built a 3-provider AI fallback chain with 5-key rotation per provider, powering daily briefings, plateau diagnosis, exercise swaps with structured JSON parsing, and macro-aware meal suggestions. Calculations engine covers Mifflin-St Jeor TDEE, Epley 1RM, and progressive overload detection.
                 </p>
                 <div class="flex flex-wrap gap-2 mb-6">
-                    <span class="text-xs tracking-wider text-warm px-3 py-1 border border-warm/20 rounded-full">Node.js</span>
-                    <span class="text-xs tracking-wider text-warm px-3 py-1 border border-warm/20 rounded-full">Express.js</span>
-                    <span class="text-xs tracking-wider text-warm px-3 py-1 border border-warm/20 rounded-full">Flask</span>
-                    <span class="text-xs tracking-wider text-warm px-3 py-1 border border-warm/20 rounded-full">Python</span>
-                    <span class="text-xs tracking-wider text-warm px-3 py-1 border border-warm/20 rounded-full">InfluxDB</span>
-                    <span class="text-xs tracking-wider text-warm px-3 py-1 border border-warm/20 rounded-full">Chart.js</span>
-                    <span class="text-xs tracking-wider text-warm px-3 py-1 border border-warm/20 rounded-full">Telegram API</span>
-                    <span class="text-xs tracking-wider text-warm px-3 py-1 border border-warm/20 rounded-full">ESP32 / LoRa</span>
+                    <span class="text-xs tracking-wider text-warm px-3 py-1 border border-warm/20 rounded-full">Next.js 16</span>
+                    <span class="text-xs tracking-wider text-warm px-3 py-1 border border-warm/20 rounded-full">TypeScript</span>
+                    <span class="text-xs tracking-wider text-warm px-3 py-1 border border-warm/20 rounded-full">Tailwind CSS 4</span>
+                    <span class="text-xs tracking-wider text-warm px-3 py-1 border border-warm/20 rounded-full">Supabase</span>
+                    <span class="text-xs tracking-wider text-warm px-3 py-1 border border-warm/20 rounded-full">Recharts</span>
+                    <span class="text-xs tracking-wider text-warm px-3 py-1 border border-warm/20 rounded-full">Zustand</span>
+                    <span class="text-xs tracking-wider text-warm px-3 py-1 border border-warm/20 rounded-full">Gemini API</span>
+                    <span class="text-xs tracking-wider text-warm px-3 py-1 border border-warm/20 rounded-full">Framer Motion</span>
                 </div>
                 <div class="proj-links">
-                    <a href="https://skyharvestwebsite.onrender.com" target="_blank" class="proj-link">
+                    <a href="https://personal-gym-dashboard-liard.vercel.app/" target="_blank" class="proj-link">
                         LIVE DEMO <span>→</span>
                     </a>
+                    <a href="https://github.com/codyninja-04" target="_blank" class="proj-link">
+                        GITHUB <span>→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Caliper -->
+            <div class="project-card rounded-2xl p-8 md:p-10 reveal" style="transition-delay: 0.15s;">
+                <div class="flex items-start justify-between mb-8">
+                    <span class="proj-num font-serif text-6xl italic text-warm/20">03</span>
+                    <span class="text-xs tracking-widest text-muted uppercase mt-2">Full Stack · SaaS</span>
+                </div>
+                <h3 class="font-serif text-2xl md:text-3xl italic text-cream mb-3">Caliper</h3>
+                <p class="text-muted font-light leading-relaxed mb-3">
+                    Manufacturing Quality Management System simulating real-world industrial workflows. Covers defect tracking, NCR management, CAPA lifecycle, supplier scoring, and full audit trails.
+                </p>
+                <p class="text-muted/70 text-sm font-light leading-relaxed mb-6">
+                    Built a supplier quality scoring engine with a rolling 90-day weighted event model and automated NCR escalation via Power Automate webhooks. Includes an append-only audit log, role-based RLS policies, and R-generated SPC control charts for statistical process analysis.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="text-xs tracking-wider text-warm px-3 py-1 border border-warm/20 rounded-full">React 18</span>
+                    <span class="text-xs tracking-wider text-warm px-3 py-1 border border-warm/20 rounded-full">Node.js</span>
+                    <span class="text-xs tracking-wider text-warm px-3 py-1 border border-warm/20 rounded-full">Express</span>
+                    <span class="text-xs tracking-wider text-warm px-3 py-1 border border-warm/20 rounded-full">Supabase</span>
+                    <span class="text-xs tracking-wider text-warm px-3 py-1 border border-warm/20 rounded-full">PostgreSQL</span>
+                    <span class="text-xs tracking-wider text-warm px-3 py-1 border border-warm/20 rounded-full">Tailwind CSS</span>
+                    <span class="text-xs tracking-wider text-warm px-3 py-1 border border-warm/20 rounded-full">Recharts</span>
+                    <span class="text-xs tracking-wider text-warm px-3 py-1 border border-warm/20 rounded-full">Power Automate</span>
+                </div>
+                <div class="proj-links">
+                    <a href="https://caliper-lake.vercel.app" target="_blank" class="proj-link">
+                        LIVE DEMO <span>→</span>
+                    </a>
+                    <a href="https://github.com/codyninja-04" target="_blank" class="proj-link">
+                        GITHUB <span>→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- DevFlow -->
+            <div class="project-card rounded-2xl p-8 md:p-10 reveal" style="transition-delay: 0.2s;">
+                <div class="flex items-start justify-between mb-8">
+                    <span class="proj-num font-serif text-6xl italic text-warm/20">04</span>
+                    <span class="text-xs tracking-widest text-muted uppercase mt-2">Full Stack · SaaS</span>
+                </div>
+                <h3 class="font-serif text-2xl md:text-3xl italic text-cream mb-3">DevFlow</h3>
+                <p class="text-muted font-light leading-relaxed mb-3">
+                    Developer productivity and project management platform. Kanban boards, bug tracking, team notes with markdown, analytics dashboards, and real-time updates across all views.
+                </p>
+                <p class="text-muted/70 text-sm font-light leading-relaxed mb-6">
+                    Built with Supabase Realtime for live cross-user sync, @dnd-kit drag-and-drop kanban with optimistic UI, a full Prisma schema across 10 relational tables, NextAuth v5 with OAuth, and GitHub Actions CI/CD pipeline with Vitest and Playwright test coverage.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="text-xs tracking-wider text-warm px-3 py-1 border border-warm/20 rounded-full">Next.js 15</span>
+                    <span class="text-xs tracking-wider text-warm px-3 py-1 border border-warm/20 rounded-full">TypeScript</span>
+                    <span class="text-xs tracking-wider text-warm px-3 py-1 border border-warm/20 rounded-full">Prisma</span>
+                    <span class="text-xs tracking-wider text-warm px-3 py-1 border border-warm/20 rounded-full">Supabase Realtime</span>
+                    <span class="text-xs tracking-wider text-warm px-3 py-1 border border-warm/20 rounded-full">NextAuth v5</span>
+                    <span class="text-xs tracking-wider text-warm px-3 py-1 border border-warm/20 rounded-full">shadcn/ui</span>
+                    <span class="text-xs tracking-wider text-warm px-3 py-1 border border-warm/20 rounded-full">dnd-kit</span>
+                    <span class="text-xs tracking-wider text-warm px-3 py-1 border border-warm/20 rounded-full">Recharts</span>
+                </div>
+                <div class="proj-links">
+                    <a href="https://github.com/codyninja-04" target="_blank" class="proj-link">
+                        GITHUB <span>→</span>
+                    </a>
+                    <span class="text-xs tracking-widest text-muted/50 uppercase">Deployment in progress</span>
                 </div>
             </div>
 
@@ -482,6 +538,7 @@
                         <span class="skill-tag px-4 py-2 rounded-full text-sm text-muted tracking-wide">MongoDB</span>
                         <span class="skill-tag px-4 py-2 rounded-full text-sm text-muted tracking-wide">SQL Server</span>
                         <span class="skill-tag px-4 py-2 rounded-full text-sm text-muted tracking-wide">InfluxDB</span>
+                        <span class="skill-tag px-4 py-2 rounded-full text-sm text-muted tracking-wide">Prisma ORM</span>
                     </div>
                 </div>
                 <div class="mb-10">
@@ -574,7 +631,6 @@
     </footer>
 
     <script>
-        // Scroll reveal
         const revealElements = document.querySelectorAll('.reveal, .divider-line');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -585,12 +641,10 @@
         }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
         revealElements.forEach(el => observer.observe(el));
 
-        // Mobile menu
         function toggleMenu() {
             document.getElementById('mobileMenu').classList.toggle('open');
         }
 
-        // Form submit
         function handleSubmit(e) {
             e.preventDefault();
             document.getElementById('formMsg').classList.remove('hidden');
@@ -600,7 +654,6 @@
             }, 4000);
         }
 
-        // Smooth scroll for nav links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
